@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Runner of the Universe</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>Folder Runner</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="hud">
-  <span id="life"></span>
-  <button id="restart">RECOMEÇAR</button>
-</div>
+    <div id="hud">
+        <div id="stage"></div>
+        <div id="info"></div>
+    </div>
 
-<!-- Controles Mobile -->
-<div id="controls">
-  <div id="joystick">
-    <div id="stick"></div>
-  </div>
-  <div id="attack">⚔</div>
-</div>
+    <div id="menu">
+        <button id="restart">RECOMEÇAR</button>
+        <button id="controlsBtn">CONTROLES</button>
+    </div>
 
-<canvas id="game"></canvas>
+    <canvas id="game"></canvas>
 
-<script src="game.js"></script>
+    <div id="controls">
+        <div id="joystick"><div id="stick"></div></div>
+        <div style="display:flex;gap:15px">
+            <div class="button" id="attack">⚔️</div>
+            <div class="button" id="dash">⚡</div>
+            <div class="button" id="jump">⬆️</div>
+        </div>
+    </div>
+
+    <div id="controlsScreen">
+        <h2>CONTROLES</h2>
+        <h3>📱 Mobile</h3>
+        <p>🕹️ Joystick — Mover</p>
+        <p>⬆️ — Pular</p>
+        <p>⚡ — Dash</p>
+        <p>⚔️ — Atacar</p>
+
+        <h3>💻 PC</h3>
+        <p>A / D ou ← → — Mover</p>
+        <p>W / ↑ / Espaço — Pular</p>
+        <p>Shift — Dash</p>
+        <p>J — Atacar</p>
+        <p>R — Recomeçar</p>
+
+        <button id="closeControls">FECHAR</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
