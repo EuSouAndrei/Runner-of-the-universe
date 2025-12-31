@@ -1,65 +1,100 @@
 html, body {
-  margin: 0;
-  overflow: hidden;
-  background: #05070d;
-  color: #e8f7ff;
-  font-family: monospace;
-  touch-action: none;
+    margin: 0;
+    overflow: hidden;
+    background: #050812;
+    font-family: monospace;
+    color: #00ffcc;
+    touch-action: none;
 }
 
 canvas {
-  display: block;
+    display: block;
 }
 
+/* HUD */
 #hud {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 10;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
 }
 
-#restart {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background: #6fffe9;
-  border: none;
-  font-weight: bold;
+#menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
 }
 
+#menu button {
+    background: #00ffcc;
+    border: none;
+    padding: 8px;
+    font-weight: bold;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Mobile controls */
 #controls {
-  position: fixed;
-  bottom: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 #joystick {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.1);
-  position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(0, 255, 204, .15);
+    position: relative;
 }
 
 #stick {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #6fffe9;
-  position: absolute;
-  top: 35px;
-  left: 35px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(0, 255, 204, .5);
+    position: absolute;
+    top: 35px;
+    left: 35px;
 }
 
-#attack {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
+.button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(0, 255, 204, .25);
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Controls screen */
+#controlsScreen {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 8, 18, .96);
+    display: none;
+    z-index: 100;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#controlsScreen h2 {
+    text-align: center;
+}
+
+#controlsScreen button {
+    background: #00ffcc;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
 }
